@@ -1,24 +1,24 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Geist, Geist_Mono } from "next/font/google"
+import { Inter, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 })
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 })
 
 export const metadata: Metadata = {
-  title: "Masdika.ID - DevOps & Cloud Engineer Portfolio",
+  title: "Bhatiar Azhari - Network Engineer Portfolio",
   description:
-    "Portfolio showcasing DevOps and Cloud Engineering expertise with over 4 years of experience in managing cloud infrastructure and automation.",
-    generator: 'v0.app'
+    "Portfolio showcasing Network Engineering expertise with experience in network infrastructure, security, and system administration.",
+  generator: "v0.app",
 }
 
 export default function RootLayout({
@@ -27,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`} suppressHydrationWarning>
       <body className="antialiased">
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           {children}
